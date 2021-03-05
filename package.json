@@ -1,0 +1,34 @@
+{
+  "name": "elm-tailwind-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dev/main.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "parcel src/index.html",
+    "prod": "cross-env NODE_ENV=production parcel build src/index.html -d prod --no-cache",
+    "elm-dev": "elm-live src/Main.elm -- --debug --output=dev/main.js",
+    "elm-prod": "parcel build dev/index.html -d prod",
+    "tailwind-dev": "postcss src/tailwind.css -o dev/styles.css --watch",
+    "tailwind-prod": "postcss src/tailwind.css -o prod/styles.css",
+    "liveserver": "live-server ./dev"
+  },
+  "author": "Vikram Cothur",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.0.0",
+    "copyfiles": "^2.4.1",
+    "cross-env": "^7.0.3",
+    "cssnano": "^4.1.10",
+    "elm-live": "^4.0.2",
+    "live-server": "^1.2.1",
+    "postcss-cli": "^8.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "autoprefixer": "^9.8.6",
+    "node-elm-compiler": "^5.0.5",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3"
+  }
+}
