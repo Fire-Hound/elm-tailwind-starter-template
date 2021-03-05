@@ -2,3 +2,4 @@ node_modules/
 elm-stuff/
 package-lock.json
 yarn.lock
+.cache/
